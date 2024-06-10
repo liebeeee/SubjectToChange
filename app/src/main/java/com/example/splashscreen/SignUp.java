@@ -5,24 +5,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthProvider;
+
+import java.util.concurrent.TimeUnit;
 
 
 public class SignUp extends AppCompatActivity {
 
-    private EditText editTextPhone;
-    private EditText pin1;
-    private EditText pin2;
-    private EditText pin3;
-    private EditText pin4;
-    private EditText repin1;
-    private EditText repin2;
-    private EditText repin3;
-    private EditText repin4;
+    private EditText editTextPhone, pin1, pin2, pin3, pin4, repin1, repin2, repin3, repin4;
     private CheckBox tAndP;
 
     @SuppressLint("MissingInflatedId")
@@ -45,6 +46,12 @@ public class SignUp extends AppCompatActivity {
 
         setupPinInputs(pin1, pin2, pin3, pin4);
         setupPinInputs(repin1, repin2, repin3, repin4);
+         findViewById(R.id.Login).setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent = new Intent(SignUp.this, LogIn.class);
+             }
+         });
 
         submitButton.setOnClickListener(v -> {
             String phone = editTextPhone.getText().toString().trim();
@@ -66,6 +73,30 @@ public class SignUp extends AppCompatActivity {
                 Intent intent = new Intent(SignUp.this, OTP_Sign.class);
                 startActivity(intent);
             }
+            PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                    "+63" + editTextPhone.getText().toString(),
+                    60,
+                    TimeUnit.SECONDS,
+                    SignUp.this,
+                    new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                        @Override
+                        public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+
+                        }
+
+                        @Override
+                        public void onVerificationFailed(@NonNull FirebaseException e) {
+                            Toast.makeText(SignUp.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                        @Override
+                        public void onCodeSent(@NonNull String verificationID, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken){
+                            Intent intent = new Intent(SignUp.this, OTP_Sign.class);
+                            intent.putExtra("mobile", editTextPhone.getText().toString());
+                            intent.putExtra("verificationId", verificationID);
+                            startActivity(intent);
+                        }
+                    }
+            );
         });
     }
 

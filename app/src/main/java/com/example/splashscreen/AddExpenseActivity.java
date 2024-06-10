@@ -66,9 +66,7 @@ public class AddExpenseActivity extends AppCompatActivity {
 
         binding.expenseRadio.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                type = "Expense";
-            }
+            public void onClick(View v) { type = "Expense"; }
         });
     }
 
@@ -77,9 +75,7 @@ public class AddExpenseActivity extends AppCompatActivity {
         MenuInflater menuInflater = getMenuInflater();
         if (type == null){
             menuInflater.inflate(R.menu.add_menu,menu);
-        }
-
-        else {
+        } else {
             menuInflater.inflate(R.menu.update_menu,menu);
         }
         return true;
@@ -112,7 +108,6 @@ public class AddExpenseActivity extends AppCompatActivity {
                 .collection("expenses")
                 .document(expenseModel.getExpenseId())
                 .delete();
-        finish();
     }
 
     private void createExpense()
@@ -145,7 +140,6 @@ public class AddExpenseActivity extends AppCompatActivity {
                 .collection("expenses")
                 .document(expenseId)
                 .set(model);
-        finish();
     }
 
     private void updateExpense()

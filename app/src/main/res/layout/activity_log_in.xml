@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LogIn">
 
     <TextView
         android:id="@+id/signup"
@@ -20,10 +20,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password" />
+        app:layout_constraintTop_toBottomOf="@+id/clickable_text" />
 
     <TextView
-        android:id="@+id/tv_forgot_password"
+        android:id="@+id/clickable_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
@@ -67,7 +67,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/circle"
+            android:gravity="center"
             android:ems="10"
+            android:maxLength="1"
             android:inputType="phone" />
 
         <EditText
@@ -77,6 +79,8 @@
             android:layout_marginEnd="8dp"
             android:background="@drawable/circle"
             android:ems="10"
+            android:gravity="center"
+            android:maxLength="1"
             android:inputType="phone" />
 
         <EditText
@@ -86,6 +90,8 @@
             android:layout_marginEnd="8dp"
             android:background="@drawable/circle"
             android:ems="10"
+            android:gravity="center"
+            android:maxLength="1"
             android:inputType="phone" />
 
         <EditText
@@ -95,6 +101,8 @@
             android:layout_marginEnd="8dp"
             android:background="@drawable/circle"
             android:ems="10"
+            android:gravity="center"
+            android:maxLength="1"
             android:inputType="phone" />
 
     </LinearLayout>
@@ -128,13 +136,13 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="38dp"
         android:text="Don't have an account yet?"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password" />
+        app:layout_constraintTop_toBottomOf="@+id/clickable_text" />
 
     <TextView
         android:id="@+id/textView3"

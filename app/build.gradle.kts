@@ -35,6 +35,7 @@ android {
 
 dependencies {
 
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -46,4 +47,7 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.auth)
+    implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+    implementation("com.google.firebase:firebase-auth")
+
 }

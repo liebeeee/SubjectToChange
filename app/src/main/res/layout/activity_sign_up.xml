@@ -209,7 +209,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.297" />
-
+    
     <Button
         android:id="@+id/signUp"
         android:layout_width="332dp"
@@ -221,9 +221,11 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tAndP"
-        app:layout_constraintVertical_bias="0.227" />
+        app:layout_constraintVertical_bias="0.228" />
+
 
     <LinearLayout
         android:layout_width="0dp"
@@ -243,11 +245,13 @@
             android:text="Already have an account?" />
 
         <TextView
+            android:id="@+id/Login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login"
             android:textColor="#7F3DFF" />
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
