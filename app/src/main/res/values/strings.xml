@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">SplashScreen</string>
+    <string name="app_name">Home Screen</string>
+    <string name="add_income">Add Income</string>
 </resources>
