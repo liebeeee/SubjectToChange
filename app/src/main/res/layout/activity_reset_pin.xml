@@ -19,7 +19,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9">
 
         <EditText
-            android:id="@+id/rnum1"
+            android:id="@+id/repin1"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
@@ -29,7 +29,7 @@
             android:inputType="phone" />
 
         <EditText
-            android:id="@+id/rnum2"
+            android:id="@+id/repin2"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
@@ -38,7 +38,7 @@
             android:inputType="phone" />
 
         <EditText
-            android:id="@+id/rnum3"
+            android:id="@+id/repin3"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
@@ -47,7 +47,7 @@
             android:inputType="phone" />
 
         <EditText
-            android:id="@+id/rnum4"
+            android:id="@+id/repin4"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8">
 
         <EditText
-            android:id="@+id/num1"
+            android:id="@+id/pin1"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
@@ -80,7 +80,7 @@
             android:inputType="phone" />
 
         <EditText
-            android:id="@+id/num2"
+            android:id="@+id/pin2"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
@@ -89,7 +89,7 @@
             android:inputType="phone" />
 
         <EditText
-            android:id="@+id/num3"
+            android:id="@+id/pin3"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
@@ -98,7 +98,7 @@
             android:inputType="phone" />
 
         <EditText
-            android:id="@+id/num4"
+            android:id="@+id/pin4"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"

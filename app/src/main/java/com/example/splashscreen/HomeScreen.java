@@ -47,8 +47,8 @@ public class HomeScreen extends AppCompatActivity implements OnItemsClick {
         }
 
         expensesAdapter = new ExpensesAdapter(this, this);
-        binding.recycle.setAdapter(expensesAdapter);
-        binding.recycle.setLayoutManager(new LinearLayoutManager(this));
+        binding.recycler.setAdapter(expensesAdapter);
+        binding.recycler.setLayoutManager(new LinearLayoutManager(this));
 
         intent = new Intent(HomeScreen.this,AddExpenseActivity.class);
 

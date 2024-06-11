@@ -140,6 +140,7 @@ public class AddExpenseActivity extends AppCompatActivity {
                 .collection("expenses")
                 .document(expenseId)
                 .set(model);
+        finish();
     }
 
     private void updateExpense()

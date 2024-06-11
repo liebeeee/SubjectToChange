@@ -21,7 +21,6 @@ public class LogIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-        TextView clickText = findViewById(R.id.clickable_text);
 
         num1 = findViewById(R.id.num1);
         num2 = findViewById(R.id.num2);
@@ -40,8 +39,16 @@ public class LogIn extends AppCompatActivity {
 
             }
         });
+        Button resetButt = findViewById(R.id.resetButt);
+        resetButt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle the click event here
+                Intent intent = new Intent(LogIn.this, ResetPinActivity.class);
 
-        };
+            }
+        });
+    }
     private void setupOtpInputs() {
         EditText[] otps = {num1, num2, num3, num4};
 
@@ -75,5 +82,6 @@ public class LogIn extends AppCompatActivity {
                 }
             });
         }
+
     }
-    }
+}

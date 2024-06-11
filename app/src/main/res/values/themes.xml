@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.SplashScreen" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.SplashScreen" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">@color/dgreen</item>
+        <item name="colorPrimary">@color/lgreen</item>
     </style>
 
     <style name="Theme.SplashScreen" parent="Base.Theme.SplashScreen" />
